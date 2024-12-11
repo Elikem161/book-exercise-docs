@@ -16,10 +16,10 @@ Additionally, AWS-specific Lambda functions are used to process this data.
 
 The primary function of this setup is to:
 
-    Collect sensor data from IoT devices.
-    Securely transmit this data using MQTT with TLS encryption, ensuring that the communication between devices and cloud is secure and authorized.
-    Process the data via cloud service functions (CSF) and an AWS Lambda function. The Lambda function, 
-    implemented for handling specific types of messages (like SensorData), performs operations on the incoming data.
+Gather sensor data from Internet of Things devices.
+Use MQTT with TLS encryption to safely send this data, making sure that device-to-cloud connectivity is both allowed and secure.
+Utilize AWS Lambda functions and cloud service functions (CSF) to process the data. The Lambda function manipulates the incoming data and is used to handle particular message kinds (such as SensorData).
+
 
 How does your implementation work?
 
