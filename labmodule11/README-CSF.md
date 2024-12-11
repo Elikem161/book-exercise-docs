@@ -23,7 +23,7 @@ Utilize AWS Lambda functions and cloud service functions (CSF) to process the da
 
 How does your implementation work?
 
-Maven and Python Project Setup:
+    Maven and Python Project Setup:
 
     First, you create a CSF zip file inside the Python-Components project using Maven. 
     The dependencies and packaging for the Cloud Service Functions (CSF) that you plan to implement on the cloud are managed by Maven.
