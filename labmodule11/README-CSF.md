@@ -25,38 +25,32 @@ How does your implementation work?
 
 Maven and Python Project Setup:
 
-    You first use Maven to generate a CSF zip file from within the python-components project. 
-    Maven handles the dependencies and packaging for the Cloud Service Functions (CSF) that you will deploy on the cloud.
+    First, you create a CSF zip file inside the Python-Components project using Maven. 
+    The dependencies and packaging for the Cloud Service Functions (CSF) that you plan to implement on the cloud are managed by Maven.
 
-    Cloud Service Functions (CSF):
+    Functions of Cloud Services (CSF):
 
-    You create a new Git branch specifically for Lab Module 11 within the python-components project. 
-    The CSF code can reuse parts of the code from previous projects (CDA), such as common modules (e.g., data modules or helper functions), 
-    because both share Python as the programming language.
-    CSF code is responsible for the communication with IoT devices and handling the data in the cloud environment.
+    You make a new Git branch in the python-components project just for Lab Module 11. 
+    Because both utilize Python as its programming language, the CSF code can reuse portions of the code from earlier projects (CDA), such as common modules (such data modules or auxiliary functions).
+    The CSF code is in charge of managing the data in the cloud environment and interacting with IoT devices.
 
-    IoT Data Communication:
 
-    The implementation uses MQTT with TLS encryption to ensure secure communication. 
-    The IoT devices (sensors) send their data over this protocol to the cloud platform. 
-    The data transmission is encrypted to prevent unauthorized access.
 
-    AWS Lambda Function:
+    Data Communication in the Internet of Things:
 
-    An AWS Lambda function is specifically created to process the SensorData messages. AWS Lambda is a serverless compute service that 
-    automatically scales based on incoming data, 
-    making it an ideal choice for processing data streams in an IoT system.
-    The Lambda function listens for the incoming sensor data, processes it
-     (e.g., stores, analyzes, or transforms the data), and takes necessary actions (e.g., saving the data to a database or triggering another service).
+    To provide safe communication, the solution combines MQTT with TLS encryption. 
+    This protocol is used by the IoT devices (sensors) to transmit their data to the cloud platform. 
+    To guard against unwanted access, the data transmission is encrypted.
 
-         Secure Authorization:
-        The communication and authorization between the devices, MQTT broker, and cloud service are handled with TLS encryption and 
-        authorization mechanisms to 
-        ensure that only authorized devices and users can send and receive data.
+    Lambda Function on AWS:
 
-In summary, the implementation creates a cloud service that connects IoT devices, 
-securely processes sensor data using AWS Lambda functions, and 
-ensures secure and authorized communication using MQTT with TLS encryption.
+    The SensorData packets are particularly processed by an AWS Lambda function. An excellent option for processing data streams in an Internet of Things system is AWS Lambda, a serverless computation service that automatically grows in response to incoming data.
+    After listening for incoming sensor data, the Lambda function processes it (storing, analyzing, or transforming it, for example) and performs any necessary actions (saving the data to a database or starting another service, for example).
+
+        Secure Authorization: To guarantee that only authorized users and devices are able to transmit and receive data, TLS encryption and authorization methods manage communication and authorization between the devices, MQTT broker, and cloud service.
+
+In conclusion, the solution establishes a cloud service that links Internet of Things devices, 
+uses AWS Lambda functions to safely handle sensor data, and uses MQTT with TLS encryption to provide safe and allowed communication.
 
 
 ### High-Level Design Diagram
