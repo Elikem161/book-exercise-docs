@@ -1,84 +1,52 @@
-# Lab Module 12 - Semester Project - Final Write-up
-
-NOTE: Be sure to implement all the Lab Module 12 requirements listed at [Lab Module 12](https://github.com/orgs/programming-the-iot/projects/1#column-10488565).
 
 
-## Description
+Project Overview
 
-Describe your idea in 1 paragraph (at least 2 or 3 sentences).
+The Patient Monitoring System is designed to provide real-time alerts to patients based on their body temperature and blood pressure levels. 
+The system continuously monitors these vital signs and ensures timely notifications to prevent critical health conditions.
 
+Functional Description
 
+The system monitors two vital parameters:
 
-## What - The Problem 
+Body Temperature:
 
-What problem did you tackle and why does it matter? Write 1 to 2 paragraphs in response.
+ 	Alerts the patient when the temperature exceeds 37°C (indicating fever or hyperthermia).
+ 	Alerts the patient when the temperature drops below 37°C (indicating potential hypothermia).
 
+Blood Pressure:
 
+ 	Alerts the patient when blood pressure readings exceed 850 mmHg (hypertension warning).
+ 	Alerts the patient when blood pressure readings drop below 850 mmHg (hypotension warning).
 
-## Why - Who Cares? 
+System Components
 
-Why do you care about this particular problem? Write 1 to 2 paragraphs in response.
-
-
-
-## How - Expected Technical Approach
-
-Write 1 to 2 paragraphs describing the outcomes you achieved.
-
-
-### System Diagram
-
-Embed a block diagram depicting your overall design, including the CDA, GDA, and Cloud Services interactions.
-Be sure to include arrows depicting data flow from one application / service to the next.
+Sensors
+ 	Temperature Sensor: Accurately measures the patient’s body temperature in real-time.
+ 	Blood Pressure Monitor: Detects systolic and diastolic blood pressure.
+Alert Mechanism
+ 	Visual Alerts: LEDs or screen notifications to indicate abnormal readings.
+ 	Audio Alerts: Buzzer or speaker to notify the patient immediately.
+ 	Communication Alerts: Option to send notifications via SMS or app to the patient’s smartphone.
 
 
 
-Write 1 to 2 paragraphs describing your design.
+
+Screenshot 1: Is showing when temperature is normal
+
+ ![alt text](image.png)
+ Screenshot 2: Is showing when the temperature is high
+ ![alt text](image-1.png)
+Screenshot 3: Is showing when blood pressure is normal 
+ ![alt text](image-2.png)
+Screenshot 4: Is showing when blood pressure is high
+ ![alt text](image-3.png)
 
 
 
-### What THREE (3) sensors and ONE (1) actuator did you use (add more if you wish)?
-
-- CDA Sensor 1: 
-
-- CDA Sensor 2: 
-
-- CDA Sensor 3: 
-
-- CDA Actuator 1: 
 
 
+Conclusion 
+The Patient Monitoring System was developed with the goal of providing real-time alerts to patients based on critical health parameters, such as body temperature and blood pressure. This system monitors vital signs continuously and issues timely notifications to help prevent critical health conditions.  
+However, during the development process, we identified a key area for improvement. Currently, the system interfaces directly with specific sensors for monitoring these parameters. This direct coupling limits the modularity and scalability of the design. A efficient approach would have been to utilize a handler mechanism. By employing a handler, we could have decoupled the sensor inputs from the actuation logic, improving flexibility, reusability, and integration in CDA.  
 
-### What ONE (1) CDA protocol and TWO (2) GDA protocols did you implement (add more if you wish)?
-
-- CDA to GDA Protocol: 
-
-- GDA to CDA Protocol: 
-
-- GDA to Cloud Protocol: 
-
-- Cloud to GDA Protocol: 
-
-
- 
-### What TWO (2) cloud services / capabilities did you use (add more if you wish)?
-
-- Cloud Service 1 (data ingress - all inputs):
-
-- Cloud Service 2 (data egress - all actuation events):
-
-
-
-## Screen Shots Representing Cloud Services
-
-
-
-### Screen Shots Representing Visualized Data
-
-NOTE: Include (at least) TWO (2) screen shots - one showing at least 1 hour
-of time-series data from the CDA, and one showing an event being triggered
-that results in an actuation event sent to your GDA and then to your CDA.
-
-
-
-EOF.
